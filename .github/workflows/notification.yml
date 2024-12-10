@@ -1,0 +1,14 @@
+name: Chat 
+on: [push, workflow_dispatch,]
+jobs:
+  meet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Google Chat Notification
+      uses: jchrist/google-chat-github-action@v1
+      with:
+        name: Build
+        url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+        status: ${{ job.status }}
+      if: always()
+      continue-on-error: true
