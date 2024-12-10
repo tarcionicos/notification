@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Google Chat Notification
-      uses: jchrist/google-chat-github-action@v1
+      uses: tarcionicos/main/action.yml@master
       with:
         name: Build
         url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
