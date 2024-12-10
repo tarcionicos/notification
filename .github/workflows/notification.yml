@@ -2,8 +2,10 @@ name: Chat
 on: [push, workflow_dispatch,]
 jobs:
   meet:
-      name: Google Chat Notification
-      uses: tarcionicos/main/.github/workflows/ci.yml@master
+    runs-on: ubuntu-latest
+    steps:
+    - name: Google Chat Notification
+      uses: jchrist/google-chat-github-action@v1
       with:
         name: Build
         url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
