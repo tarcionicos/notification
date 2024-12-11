@@ -9,7 +9,7 @@ jobs:
   meet:
     runs-on: ubuntu-latest
     steps:
-    - name: Google Chat Notification
+    - name: Google Chat 
       uses: tarcionicos/main@master
       with:
         name: Build
