@@ -1,5 +1,5 @@
 name: Chat 
-on: [push, workflow_dispatch,]
+on: [push, workflow_dispatch]
 jobs:
   meet:
     runs-on: ubuntu-latest
